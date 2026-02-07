@@ -1,7 +1,6 @@
 {
   "name": "cody",
   "private": true,
-  "homepage":"https://joribavi.github.io/WDD-330-Final-Project/cody/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
