@@ -3,5 +3,5 @@
 @source "./**/*.{html,js}";
 
 .my-Header {
-background: blue;
+background-color: blue;
 }
