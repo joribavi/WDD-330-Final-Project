@@ -9,7 +9,7 @@ export default defineConfig({
      rullupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        events: resolve(__dirname, "src/sub-pages/events.html"),
+        events: resolve(__dirname, "src/sub-pages/events/index.html"),
         forum: resolve(__dirname, "src/sub-pages/forum.html"),
         media: resolve(__dirname, "src/sub-pages/media.html"),
         others: resolve(__dirname, "src/sub-pages/others.html"),
