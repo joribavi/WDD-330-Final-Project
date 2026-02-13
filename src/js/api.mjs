@@ -29,15 +29,14 @@ export async function gitApiFetch(seachTopic){
 
 }
 
-export async function bitBucketFetch(searchTopic){
+export async function openLibraryFetch(searchTopic){
 
    try {
-      const apiUrl =  `https://api.bitbucket.org/2.0/repositories?q=name~'${searchTopic}'&role=member
-&pagelen=10`;
+      const apiUrl = `https://openlibrary.org/search.json?q=${searchTopic}`;   
       const response = await fetch(apiUrl);
       const data = await response.json();
       console.log(data) //for testing
-      return data.values;
+      return data;
    
 
    } catch (error) {
