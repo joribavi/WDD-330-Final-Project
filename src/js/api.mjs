@@ -28,3 +28,25 @@ export async function gitApiFetch(seachTopic){
 
 
 }
+
+export async function bitBucketFetch(searchTopic){
+
+   try {
+      const apiUrl =  `https://api.bitbucket.org/2.0/repositories?q=name~'${searchTopic}'&role=member
+&pagelen=10`;
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      console.log(data) //for testing
+      return data.values;
+   
+
+   } catch (error) {
+
+          console.error("An error occurred");
+     
+   }
+
+} 
+
+
+
