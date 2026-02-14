@@ -16,8 +16,9 @@ export async function gitApiFetch(seachTopic){
     
      });
   
-    return console.log(response.data); // for testing purposes
-
+   console.log(response.data); // for testing purposes
+   return response.data;
+     
   } catch (error) {
     if (error.status === 404) {
     console.log(`something is wrong`);
