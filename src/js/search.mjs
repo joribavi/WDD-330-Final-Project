@@ -29,9 +29,9 @@ function displaySearchResults(data){
     const userName = document.createElement("p");
     const repoUrl = document.createElement("p");
 
-    searchDescription.innerHTML = singleResult.description;
-    userName.innerHTML = singleResult.owner.login;
-    repoUrl.innerHTML = singleResult.html_url;
+    searchDescription.innerHTML = `<strong>Description:</strong> ${singleResult.description}`;
+    userName.innerHTML = `<strong>Author:</strong> ${singleResult.owner.login}`;
+    repoUrl.innerHTML = `<strong> Repository URL: </strong> <a> ${singleResult.html_url}</a>`;
 
     
 
@@ -41,8 +41,12 @@ function displaySearchResults(data){
 
     resultsContainer.appendChild(singleResultWrapper);
 
-    //adding styles to this results
-    resultsContainer.className("bg-blue-200");
+
+    //adding styles to this results 
+    resultsContainer.classList.add("bg-blue-200" , "border" , "rounded-lg" , "p-3" , "m-3");
+
+    singleResultWrapper.className = "border-2 border-solid border-gray-500 p-1";
+
 
  }); 
  console.log(data)   //for testing
