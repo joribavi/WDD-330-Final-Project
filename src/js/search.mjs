@@ -21,13 +21,27 @@ searchUserInput.addEventListener("input", (e)=> {
 
 function displaySearchResults(data){
 //Here comes the html that will be inserted into the DOM
-/* const resultsContainer = document.getElementById("search-bar-results");
- data.forEach(singleResult=> {
+ const resultsContainer = document.getElementById("search-bar-results");
+ resultsContainer.innerHTML = "" ; //cleaning search before looking for another term
+ data.items.forEach(singleResult=> {
     const singleResultWrapper = document.createElement("div");
-    const 
+    const searchDescription = document.createElement("p");
+    const userName = document.createElement("p");
+    const repoUrl = document.createElement("p");
 
+    searchDescription.innerHTML = singleResult.description;
+    userName.innerHTML = singleResult.owner.login;
+    repoUrl.innerHTML = singleResult.html_url;
 
- }); */ 
+    
+
+    singleResultWrapper.appendChild(searchDescription);
+    singleResultWrapper.appendChild(userName);
+    singleResultWrapper.appendChild(repoUrl);
+
+    resultsContainer.appendChild(singleResultWrapper);
+
+ }); 
  console.log(data)   //for testing
 }
 
