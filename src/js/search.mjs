@@ -4,11 +4,11 @@ import { openLibraryFetch } from "./api.mjs";
 export async function searchInput() {
 const searchUserInput = document.getElementById("search");
 
-searchUserInput.addEventListener("input", (e)=> {
+searchUserInput.addEventListener("input", async (e)=> {
 
   const searchTerm = e.target.value;  
 
-  const data =  gitApiFetch(searchTerm);
+  const data = await gitApiFetch(searchTerm);
 
   console.log(data); // for testing 
 
@@ -40,6 +40,9 @@ function displaySearchResults(data){
     singleResultWrapper.appendChild(repoUrl);
 
     resultsContainer.appendChild(singleResultWrapper);
+
+    //adding styles to this results
+    resultsContainer.className("bg-blue-200");
 
  }); 
  console.log(data)   //for testing
