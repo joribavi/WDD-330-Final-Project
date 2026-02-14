@@ -3,6 +3,15 @@ import { searchInput } from "./search.mjs";
 
 
 await loadHeaderFooter();
-await searchInput();
+async function searchBar(query,type){
+    if(type=== "Github") {
+        await searchInput();
+    }
+    else if(type === "Books") {
+        console.log("working on second function...")
+    }
+}
+
+//await searchInput();
 //await gitApiFetch("loops"); // (used for testing only)
 //await openLibraryFetch("python loop"); //testing code
