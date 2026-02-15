@@ -51,6 +51,3 @@ function displaySearchResults(data){
  }); 
  console.log(data)   //for testing
 }
-
-
-
