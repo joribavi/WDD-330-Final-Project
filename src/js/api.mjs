@@ -33,7 +33,7 @@ export async function gitApiFetch(seachTopic){
 export async function openLibraryFetch(searchTopic){
 
    try {
-      const apiUrl = `https://openlibrary.org/search.json?q=${searchTopic}`;   
+      const apiUrl = `https://openlibrary.org/search.json?q=${searchTopic}&limit=10`;   
       const response = await fetch(apiUrl);
       const data = await response.json();
       console.log(data) //for testing
