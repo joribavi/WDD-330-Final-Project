@@ -29,12 +29,9 @@ searchUserInput.addEventListener("input", async (e) => {
 
   if(currentSearch === "github"){
 
-      console.log("user chose Github") //testing code
   
-    
      data = await gitApiFetch(searchTerm);
 
-     console.log(data); // for testing 
 
      displaySearchResults(data);
 
@@ -45,10 +42,8 @@ searchUserInput.addEventListener("input", async (e) => {
     
     else if(currentSearch === "books") {
 
-     console.log("user chose books"); //for testing  
       
      data = await openLibraryFetch(searchTerm);
-      console.log(data); //for testing
     
       displayBookResults(data)
 
@@ -100,7 +95,6 @@ function displaySearchResults(data){
 
 
  }); 
- console.log(data)   //for testing
 }
 
 
